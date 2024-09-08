@@ -48,3 +48,30 @@ const myFunction=function(){
 console.log(typeof heros); //Object
 console.log(typeof myObj); //Object
 console.log(typeof myFunction);//function
+
+console.log(" ")
+
+
+//********************** 
+// memory: Stact (Primitive), Heap (Non-Primitive)
+
+//primitive dataType
+let myNewName = "Ankur"
+let anotherName = myNewName
+
+anotherName = "Tinku"
+console.log(myNewName)
+console.log(anotherName)
+
+
+//non-primitive dataType
+ let userOne = {
+    email: "ankur@gmail.com",
+    upi: "9889@ptsbi"
+ }
+ let userTwo = userOne
+ userTwo.email = "tinku@mail.com"
+
+
+ console.log(userOne.email);
+ console.log(userTwo.email);
