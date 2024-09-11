@@ -73,3 +73,33 @@ console.log(entrie)
 console.log(user1.hasOwnProperty("email")) //result is in boolean
 
 
+
+
+
+
+//destructuring object
+const course = {
+    courseName: "js in Hindi",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+//course.courseInstructor //in place of accesaing object elemnet like this we can destructure the object as below
+const {courseInstructor: instructor} =course  // when we see curlybracess just after const or let or var  it means that we are de-strucuring the object
+ console.log(instructor)
+
+ //JSON
+
+//  {
+//     "name": "hitesh",
+//     "courseName": "js in hindi",
+//     "price": "free"
+//  }
+//JSON is a data formate mostly used in api
+
+//the data which has been can be any from like it can be in array form which contain object as below
+[
+    {},
+    {},
+    {}
+
+]
