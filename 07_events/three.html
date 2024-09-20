@@ -15,7 +15,9 @@ let event;
 
 //setting Interval
 const changeText = function(){
-    console.log('learning JavaScript With Chai Aur Code and',Date.now());
+   // console.log('learning JavaScript With Chai Aur Code and',Date.now());
+   let date = new Date();
+   document.querySelector('h1').innerHTML = `earning JavaScript With Chai Aur Code. ${date.toString()} `
 }
 document.querySelector('.start').addEventListener('click',function(){
    event = setInterval(changeText,500);
