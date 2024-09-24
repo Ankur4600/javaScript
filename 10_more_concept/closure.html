@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure and lexical scoping</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+    function init(){
+        let name = "mozilla";
+        function displayName(){
+            console.log(name)
+        }
+        displayName()
+    }
+    init()
+
+    function outer(){
+        let username = "ankur"
+       // console.log(secret)
+        function inner(){
+            let secret = "1234"
+            console.log(`innerOne: ${username}`)
+        }
+
+        function innerTwo(){
+            console.log(`innerTwo: ${username}`)
+            //console.log(secret)
+        }
+        inner();
+        innerTwo();
+    }
+    outer()
+
+    function makeFunction(){
+        const name = "mozilla"
+        function display(){
+            console.log(name,'function 3')
+        }
+        return display;
+    }
+    const fun = makeFunction()
+    fun()
+</script>
+<script>
+    // document.querySelector('#orange').addEventListener('click', function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // })
+    // document.querySelector('#green').addEventListener('click', function(){
+    //     document.body.style.backgroundColor = 'green'
+    // })
+
+    function clickHandler(color){
+       // document.body.style.backgroundColor = `${color}`
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.querySelector('#orange').onclick = clickHandler('orange')
+    document.querySelector('#green').onclick = clickHandler('green')
+   
+</script>
+
+</html>
